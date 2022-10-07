@@ -2,6 +2,7 @@ import { Client } from 'cassandra-driver';
 
 export default async function handler(req, res) {
     if (req.method === 'GET') {
+        console.log(__dirname);
         const client = new Client({
             cloud: {
                 secureConnectBundle:
