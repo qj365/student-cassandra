@@ -1,11 +1,13 @@
 import { Client } from 'cassandra-driver';
+import path from 'path';
 
 export default async function handler(req, res) {
     if (req.method === 'GET') {
         console.log(__dirname);
         const client = new Client({
             cloud: {
-                secureConnectBundle: './secure-connect-student-cassandra.zip',
+                secureConnectBundle:
+                    process.cwd() + '/secure-connect-student-cassandra.zip',
             },
             credentials: {
                 username: 'ReGNBkdsTBZdrStZltUIfkwQ',
