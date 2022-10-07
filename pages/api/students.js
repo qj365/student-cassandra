@@ -4,7 +4,8 @@ export default async function handler(req, res) {
     if (req.method === 'GET') {
         const client = new Client({
             cloud: {
-                secureConnectBundle: './secure-connect-student-cassandra.zip',
+                secureConnectBundle:
+                    './public/secure-connect-student-cassandra.zip',
             },
             credentials: {
                 username: 'ReGNBkdsTBZdrStZltUIfkwQ',
