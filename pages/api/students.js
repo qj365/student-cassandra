@@ -7,7 +7,7 @@ export default async function handler(req, res) {
         const client = new Client({
             cloud: {
                 secureConnectBundle:
-                    path.join(process.cwd(), 'bundle') +
+                    path.join(process.cwd(), 'json') +
                     '/sercure-connect-student-cassandra.zip',
             },
             credentials: {
