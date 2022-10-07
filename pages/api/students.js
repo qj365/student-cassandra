@@ -3,12 +3,14 @@ import path from 'path';
 
 export default async function handler(req, res) {
     if (req.method === 'GET') {
-        console.log(__dirname);
+        console.log(process.cwd());
         const client = new Client({
             cloud: {
-                secureConnectBundle:
-                    path.join(process.cwd(), 'json') +
-                    '/sercure-connect-student-cassandra.zip',
+                secureConnectBundle: path.join(
+                    process.cwd(),
+                    'json',
+                    'secure-connect-student-cassandra.zip'
+                ),
             },
             credentials: {
                 username: 'ReGNBkdsTBZdrStZltUIfkwQ',
