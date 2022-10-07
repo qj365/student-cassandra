@@ -1,4 +1,5 @@
 import { Client } from 'cassandra-driver';
+import path from 'path';
 
 export default async function handler(req, res) {
     const client = new Client({
